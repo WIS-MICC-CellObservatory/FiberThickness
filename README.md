@@ -32,28 +32,28 @@ The macro allow procewssing of single file or whole folder.
 
 1. Scale the image to correct units (assuming the width of the image is equal to imRealLength um)
 2. Segment the film into binary image
- 		- Apply background subtraction using rolling ball - this is optional step , that is used by default. 
- 		  for this it is important to set MaxEstimatedWidthUm correctly. the rolling ball size is set to MaxEstimatedWidthUm+10 
- 		  it is especially important when you use AutoThreshold. 
- 		- Use either AutoThreshold (Li) or fixed threshold (0-MaxFilmIntensity) 
- 		  note that the fixed threshold values need to change if you use background subtraction
+	- Apply background subtraction using rolling ball - this is optional step , that is used by default. 
+  	  for this it is important to set MaxEstimatedWidthUm correctly. the rolling ball size is set to MaxEstimatedWidthUm+10 
+  	  it is especially important when you use AutoThreshold. 
+	- Use either AutoThreshold (Li) or fixed threshold (0-MaxFilmIntensity) 
+  	 note that the fixed threshold values need to change if you use background subtraction
 3. Measure the local thickness of the binary image
 4. Find center line of the film 
- 	> Erode the binary film - to achieve better skeletonization, 
- 	  nErode value can be set in 3 ways controled by setErodeValStrategy: 
- 	  - fixed value (nDefaultErode)
- 	  - the maximum between (Mean LocThick - 2* Std LocThk)/3  && MinLocThick/3
- 	  - fixed value or the above value if the default fixed value is smaller
+	- Erode the binary film - to achieve better skeletonization, 
+  	  nErode value can be set in 3 ways controled by setErodeValStrategy: 
+	- fixed value (nDefaultErode)
+ 	- the maximum between (Mean LocThick - 2* Std LocThk)/3  && MinLocThick/3
+ 	- fixed value or the above value if the default fixed value is smaller
  	  by default use nDefaultErode (=20 pixels), but lower this value to (Mean LocThick - 2* Std LocThk)/3 for thinner films 
- 	> Skeletonize
- 	> Discard skeleton areas that are up to ignoreBorderSize percent from the image border, 
+ 	- Skeletonize
+ 	- Discard skeleton areas that are up to ignoreBorderSize percent from the image border, 
  	  if ignoreTopDown=0 , only side borders are ignored, =1: both side and top/bottom borders of the image are ignored
- 	> Discard (most of) the perpendicular skeleton segments by: 
- 		= breaking the skeleton at branch points
- 		= discarding skeleton segments smaller than MinSkeletonArea (usually perpendicular)
- 		= optionally discard segments that are oriented between minAngleToFilter and maxAngleToFilter 
- 		  NOTE: it is valid to use the above only if the films were always imaged at horizontal orientation 
- 		  this is controled by filterByAngle
+ 	- Discard (most of) the perpendicular skeleton segments by: 
+ 		breaking the skeleton at branch points, 
+ 		discarding skeleton segments smaller than MinSkeletonArea (usually perpendicular), 
+ 		optionally discard segments that are oriented between minAngleToFilter and maxAngleToFilter ,
+ 		NOTE: it is valid to use the above only if the films were always imaged at horizontal orientation 
+ 		this is controled by filterByAngle
 5. Measure Mean/Median/Modal/Min/Max of Local thickness along the remaining skeleton segments,  
    which are assumed to be good approximation for the centerline 
 6. Write summary line 
