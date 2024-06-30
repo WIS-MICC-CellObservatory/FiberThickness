@@ -27,6 +27,7 @@ By Ofra Golani, MICC Cell Observatory, Weizmann Institute of Science, March 2020
 ## Workflow
 
 The macro allow procewssing of single file or whole folder. 
+
 It assumes that the samples are horizontaly positioned
   
 1. Scale the image to correct units (assuming the width of the image is equal to imRealLength um)
