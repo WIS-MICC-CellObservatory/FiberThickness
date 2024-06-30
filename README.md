@@ -24,12 +24,11 @@ By Ofra Golani, MICC Cell Observatory, Weizmann Institute of Science, March 2020
 <img src="PNG/Standart_degummed_fibers_-_13_S0000(TR6)_C00_M0000_ORG_LocThkOverlay.png" width="300" title="Local Thickness">
 	</p>
 
-It assumes that the samples are horizontaly posioned
-  
 ## Workflow
 
 The macro allow procewssing of single file or whole folder. 
-
+It assumes that the samples are horizontaly positioned
+  
 1. Scale the image to correct units (assuming the width of the image is equal to imRealLength um)
 2. Segment the film into binary image
 	- Apply background subtraction using rolling ball - this is optional step , that is used by default. 
