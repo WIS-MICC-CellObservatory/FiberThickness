@@ -19,9 +19,9 @@ Workflow language: ImageJ macro
 By Ofra Golani, MICC Cell Observatory, Weizmann Institute of Science, March 2020
 
 <p align="center">
-<img src="https://github.com/WIS-MICC-CellObservatory/FiberThickness/PNG/Standart degummed fibers - 13_S0000(TR6)_C00_M0000_ORG.png" width="80" title="Input">
-<img src="https://github.com/WIS-MICC-CellObservatory/FiberThickness/PNG/Standart_degummed_fibers_-_13_S0000(TR6)_C00_M0000_ORG_OrigOverlay.png" width="80" title="Overlay of measurement regions">
-<img src="https://github.com/WIS-MICC-CellObservatory/FiberThickness/PNG/Standart_degummed_fibers_-_13_S0000(TR6)_C00_M0000_ORG_LocThkOverlay.png" width="80" title="Local Thickness">
+<img src="PNG/Standart degummed fibers - 13_S0000(TR6)_C00_M0000_ORG.png" width="80" title="Input">
+<img src="PNG/Standart_degummed_fibers_-_13_S0000(TR6)_C00_M0000_ORG_OrigOverlay.png" width="80" title="Overlay of measurement regions">
+<img src="PNG/Standart_degummed_fibers_-_13_S0000(TR6)_C00_M0000_ORG_LocThkOverlay.png" width="80" title="Local Thickness">
 	</p>
 
 It assumes that the samples are horizontaly posioned
